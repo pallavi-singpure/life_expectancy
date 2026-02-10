@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 50%;
+    padding: 30px;
+    background: white;
+    overflow-y: scroll;
+}
+
+.right {
+    width: 50%;
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e874b;
+}
+
+.result-card {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.result-card p {
+    font-size: 50px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.empty {
+    opacity: 0.6;
+}

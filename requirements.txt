@@ -1,0 +1,12 @@
+flask 
+numpy
+joblib
+pandas
+streamlit
+scikit-learn
+fastapi
+uvicorn
+jinja2
+python-multipart
+scikit-learn
+

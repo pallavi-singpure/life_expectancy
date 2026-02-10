@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life Expectancy Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="main">
+
+    <div class="left">
+        <h1>🌍 Life Expectancy Predictor</h1>
+
+        <form action="/predict" method="post">
+
+            <label>Year</label>
+            <input type="number" name="year" required>
+
+            <label>Status</label>
+            <select name="status">
+                <option value="0">Developing</option>
+                <option value="1">Developed</option>
+            </select>
+
+            <label>Adult Mortality</label>
+            <input type="number" name="adult_mortality" step="any">
+
+            <label>Infant Deaths</label>
+            <input type="number" name="infant_deaths">
+
+            <label>Alcohol</label>
+            <input type="number" name="alcohol" step="any">
+
+            <label>Health Expenditure</label>
+            <input type="number" name="expenditure" step="any">
+
+            <label>Hepatitis B</label>
+            <input type="number" name="hepatitis">
+
+            <label>Measles</label>
+            <input type="number" name="measles">
+
+            <label>BMI</label>
+            <input type="number" name="bmi" step="any">
+
+            <label>Under Five Deaths</label>
+            <input type="number" name="under_five">
+
+            <label>Polio</label>
+            <input type="number" name="polio">
+
+            <label>Total Expenditure</label>
+            <input type="number" name="total_exp" step="any">
+
+            <label>Diphtheria</label>
+            <input type="number" name="diphtheria">
+
+            <label>HIV/AIDS</label>
+            <input type="number" name="hiv" step="any">
+
+            <label>GDP</label>
+            <input type="number" name="gdp" step="any">
+
+            <label>Population</label>
+            <input type="number" name="population">
+
+            <label>Thinness 1–19 years</label>
+            <input type="number" name="thin1" step="any">
+
+            <label>Thinness 5–9 years</label>
+            <input type="number" name="thin2" step="any">
+
+            <label>Income Composition</label>
+            <input type="number" name="income" step="any">
+
+            <label>Schooling</label>
+            <input type="number" name="schooling" step="any">
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <div class="right">
+        {% if prediction %}
+            <div class="result-card">
+                <h2>🎉 Prediction Result</h2>
+                <p>{{ prediction }} Years</p>
+            </div>
+        {% else %}
+            <div class="result-card empty">
+                <h2>Prediction will appear here</h2>
+            </div>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>
